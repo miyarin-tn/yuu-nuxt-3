@@ -17,7 +17,7 @@ useHead({
   title: 'Yuu Nuxt 3',
 })
 </script>
-<style scoped>
+<style scoped lang="scss">
 .yuu-welcome {
   display: flex;
   flex-direction: column;
@@ -25,15 +25,15 @@ useHead({
   justify-content: center;
   row-gap: 1rem;
   height: 100vh;
-}
-.yuu-welcome svg {
-  width: 80px;
-  height: auto;
-}
-.yuu-welcome h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  line-height: 1;
-  margin: 0;
+  svg {
+    width: 80px;
+    height: auto;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+  }
 }
 </style>
