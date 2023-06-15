@@ -16,5 +16,6 @@ module.exports = {
     'no-console': 'off',
     'vue/html-self-closing': 'off',
     'comma-dangle': ['error', 'always-multiline'],
+    'vue/no-v-html': 'off',
   },
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="yuu-welcome">
+  <div class="yuu-container yuu-welcome">
     <NuxtLink to="/">
       <svg width="61" height="42" viewBox="0 0 61 42" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -14,7 +14,10 @@
 </template>
 <script setup lang="ts">
 useHead({
-  title: 'Yuu Nuxt 3',
+  titleTemplate: 'Yuu Nuxt 3',
+})
+definePageMeta({
+  name: 'Home',
 })
 </script>
 <style scoped lang="scss">
@@ -24,7 +27,7 @@ useHead({
   align-items: center;
   justify-content: center;
   row-gap: 1rem;
-  height: 100vh;
+  min-height: calc(100vh - 64px);
   svg {
     width: 80px;
     height: auto;
