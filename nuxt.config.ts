@@ -6,4 +6,8 @@ export default defineNuxtConfig({
   css: [
     '@/assets/css/styles.css',
   ],
+  // Dev server config: https://nuxt.com/docs/api/configuration/nuxt-config#devserver
+  devServer: {
+    port: Number(process.env.APP_PORT || 3000),
+  },
 })
