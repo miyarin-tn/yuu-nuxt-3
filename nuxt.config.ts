@@ -36,6 +36,34 @@ export default defineNuxtConfig({
   css: [
     '@/assets/scss/styles.scss',
   ],
+  // Modules: https://nuxt.com/docs/api/configuration/nuxt-config#modules-1
+  modules: [
+    // I18n: https://v8.i18n.nuxtjs.org/getting-started/setup#nuxtconfigts
+    [
+      '@nuxtjs/i18n',
+      {
+        locales: [
+          {
+            code: 'en',
+            iso: 'en-US',
+            file: 'en.ts',
+          },
+          {
+            code: 'vi',
+            iso: 'vi-VN',
+            file: 'vi.ts',
+          },
+        ],
+        lazy: true,
+        langDir: 'locales',
+        defaultLocale: 'en',
+        strategy: 'no_prefix',
+        experimental: {
+          jsTsFormatResource: true,
+        },
+      },
+    ],
+  ],
   // Dev server config: https://nuxt.com/docs/api/configuration/nuxt-config#devserver
   devServer: {
     port: Number(process.env.APP_PORT || 3000),

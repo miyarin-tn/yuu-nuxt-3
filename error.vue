@@ -37,12 +37,23 @@
     </div>
     <div v-else class="yuu-error--go-back">
       <NuxtLink to="/">
-        Go back home
+        {{ $t('GO_BACK_HOME') }}
       </NuxtLink>
     </div>
   </div>
 </template>
 <script setup lang="ts">
+const i18nHead = useLocaleHead({
+  addSeoAttributes: true,
+})
+useHead({
+  htmlAttrs: {
+    lang: i18nHead.value.htmlAttrs!.lang,
+  },
+  link: [...(i18nHead.value.link || [])],
+  meta: [...(i18nHead.value.meta || [])],
+})
+
 const error = useError()
 useHead({
   // @ts-ignore

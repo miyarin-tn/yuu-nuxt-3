@@ -9,7 +9,7 @@
         </path>
       </svg>
     </NuxtLink>
-    <h1>Welcome to Yuu Nuxt template!</h1>
+    <h1>{{ $t('WELCOME_SITE', { site: 'Yuu Nuxt' }) }}</h1>
   </div>
 </template>
 <script setup lang="ts">
