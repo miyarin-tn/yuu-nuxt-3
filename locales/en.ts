@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 export default defineI18nLocale((locale: string) => {
   return Promise.resolve(en)
   /* ----- translate by external API ----- */

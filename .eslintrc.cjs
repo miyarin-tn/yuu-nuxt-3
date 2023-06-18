@@ -17,5 +17,6 @@ module.exports = {
     'vue/html-self-closing': 'off',
     'comma-dangle': ['error', 'always-multiline'],
     'vue/no-v-html': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
   },
 }
