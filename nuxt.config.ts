@@ -63,6 +63,13 @@ export default defineNuxtConfig({
         },
       },
     ],
+    // Pinia: https://pinia.vuejs.org/ssr/nuxt.html
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: ['defineStore', 'acceptHMRUpdate'],
+      },
+    ],
   ],
   // Dev server config: https://nuxt.com/docs/api/configuration/nuxt-config#devserver
   devServer: {
