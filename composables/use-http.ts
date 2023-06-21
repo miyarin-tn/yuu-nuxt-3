@@ -27,7 +27,10 @@ export function useHttp<T> (
     watchArr = Object.values(yuuOptions?.watchEffect)
   }
 
+  const config = useRuntimeConfig()
+
   return useFetch(() => replaceRequest(yuuRequest, yuuOptions), {
+    baseURL: config.public.baseURL,
     ...yuuOptions,
     lazy,
     watch: watchArr,
@@ -56,9 +59,12 @@ export function useAsyncHttp<T> (
     watchArr = Object.values(yuuAsyncOptions?.watchEffect)
   }
 
+  const config = useRuntimeConfig()
+
   return useAsyncData(
     yuuKey,
     () => $fetch(replaceRequest(yuuRequest, yuuAsyncOptions), {
+      baseURL: config.public.baseURL,
       ...yuuRequestOptions,
       onRequest ({ request, options }) {
       },

@@ -71,6 +71,12 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  // Runtime config: https://nuxt.com/docs/api/configuration/nuxt-config#runtimeconfig
+  runtimeConfig: {
+    public: {
+      baseURL: process.env.BASE_URL || 'http://localhost:3000',
+    },
+  },
   // Dev server config: https://nuxt.com/docs/api/configuration/nuxt-config#devserver
   devServer: {
     port: Number(process.env.APP_PORT || 3000),
