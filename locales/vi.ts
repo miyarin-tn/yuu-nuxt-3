@@ -11,4 +11,6 @@ export const vi = {
   GO_BACK_HOME: 'Về trang chủ',
   PAGE_NOT_FOUND: 'Không tìm thấy trang',
   LICENSE: 'Giấy phép {name}',
+  TOKEN_EXPIRED: 'Mã đã hết hạn',
+  UNAUTHORIZED: 'Chưa xác thực',
 }

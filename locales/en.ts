@@ -11,4 +11,6 @@ export const en = {
   GO_BACK_HOME: 'Go back home',
   PAGE_NOT_FOUND: 'Page not found',
   LICENSE: '{name} License',
+  TOKEN_EXPIRED: 'Token is expired',
+  UNAUTHORIZED: 'Unauthorized',
 }
