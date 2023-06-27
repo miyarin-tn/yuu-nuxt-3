@@ -13,4 +13,8 @@ export const en = {
   LICENSE: '{name} License',
   TOKEN_EXPIRED: 'Token is expired',
   UNAUTHORIZED: 'Unauthorized',
+  USERNAME: 'Username',
+  PASSWORD: 'Password',
+  LOGIN: 'Login',
+  BACK_TO_HOME: 'Back to Home',
 }

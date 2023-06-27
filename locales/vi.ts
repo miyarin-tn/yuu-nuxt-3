@@ -13,4 +13,8 @@ export const vi = {
   LICENSE: 'Giấy phép {name}',
   TOKEN_EXPIRED: 'Mã đã hết hạn',
   UNAUTHORIZED: 'Chưa xác thực',
+  USERNAME: 'Tên đăng nhập',
+  PASSWORD: 'Mật khẩu',
+  LOGIN: 'Đăng nhập',
+  BACK_TO_HOME: 'Trở về trang chủ',
 }

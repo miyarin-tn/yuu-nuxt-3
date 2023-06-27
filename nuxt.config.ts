@@ -70,6 +70,8 @@ export default defineNuxtConfig({
         autoImports: ['defineStore', 'acceptHMRUpdate'],
       },
     ],
+    // Lodash: https://nuxt.com/modules/lodash#config
+    'nuxt-lodash',
   ],
   // Runtime config: https://nuxt.com/docs/api/configuration/nuxt-config#runtimeconfig
   runtimeConfig: {

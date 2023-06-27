@@ -27,6 +27,7 @@
     "jwt-decode": "^3.1.2",
     "lint-staged": "^13.2.2",
     "nuxt": "^3.5.2",
+    "nuxt-lodash": "^2.5.0",
     "sass": "^1.63.4",
     "typescript": "^5.1.3"
   },

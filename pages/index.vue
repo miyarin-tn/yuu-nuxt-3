@@ -18,6 +18,7 @@ useHead({
 })
 definePageMeta({
   name: 'Home',
+  middleware: ['auth'],
 })
 </script>
 <style scoped lang="scss">
