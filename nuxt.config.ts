@@ -72,6 +72,8 @@ export default defineNuxtConfig({
     ],
     // Lodash: https://nuxt.com/modules/lodash#config
     'nuxt-lodash',
+    // Color mode: https://color-mode.nuxtjs.org/#configuration
+    '@nuxtjs/color-mode',
   ],
   // Runtime config: https://nuxt.com/docs/api/configuration/nuxt-config#runtimeconfig
   runtimeConfig: {

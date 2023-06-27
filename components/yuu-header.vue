@@ -1,6 +1,10 @@
 <template>
   <header>
     <div class="yuu-container--full yuu-header">
+      <label class="yuu-switch">
+        <input v-model="checked" type="checkbox" />
+        <span class="yuu-slider round"></span>
+      </label>
       <ul class="yuu-locales">
         <li
           v-for="loc in availableLocales"
@@ -44,6 +48,17 @@ const availableLocales = computed(() => {
   return (locales.value).filter(l => l.code !== locale.value)
 })
 
+// @ts-ignore
+const colorMode = useColorMode()
+const checked = computed({
+  get () {
+    return colorMode.value === 'dark'
+  },
+  set (isDark: boolean) {
+    colorMode.preference = !isDark ? 'light' : 'dark'
+  },
+})
+
 const authStore = useAuthStore()
 const { isAuthenticated } = storeToRefs(authStore)
 
@@ -66,6 +81,7 @@ async function doLogout () {
 <style scoped lang="scss">
 .yuu-header {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   column-gap: 5px;
 }

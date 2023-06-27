@@ -1,0 +1,10 @@
+:root[class="light-mode"] {
+  --primary-color: #fff;
+}
+
+.light-mode {
+  body {
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.8);
+  }
+}

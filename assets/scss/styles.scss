@@ -37,3 +37,42 @@ ul {
     padding-right: 15px;
   }
 }
+
+.yuu-switch {
+  position: relative;
+  width: 30px;
+  height: 18px;
+  .yuu-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+    }
+    &.round {
+      border-radius: 9px;
+    }
+  }
+  input {
+    display: none;
+    &:checked + .yuu-slider {
+      background-color: #3b8070;
+      &::before {
+        transform: translateX(12px);
+      }
+    }
+  }
+}
