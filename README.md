@@ -93,4 +93,35 @@ $ docker-compose up --build
 $ CURRENT_UID=$(id -u):$(id -g) docker-compose up --build
 ```
 
+## Run by PM2
+
+1. Prerequisites:
+
+- [Install pm2](https://pm2.keymetrics.io/docs/usage/quick-start)
+
+2. Prepare and use
+
+> Run development mode
+
+```bash
+# run pm2
+$ pm2 start ecosystem.config.cjs
+
+# stop a name of pm2
+$ pm2 stop <name>
+```
+
+> Run production mode
+
+```bash
+# build project
+$ npm run build
+
+# run pm2
+$ pm2 start ecosystem.config.prod.cjs
+
+# stop a name of pm2
+$ pm2 stop <name>
+```
+
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
