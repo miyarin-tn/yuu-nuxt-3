@@ -60,4 +60,37 @@ pnpm run preview
 yarn preview
 ```
 
+## Build by Docker
+
+1. Prerequisites:
+
+- [Install docker](https://docs.docker.com/engine/install)
+- [Install docker-compose](https://docs.docker.com/compose/install/)
+
+2. Build
+
+> Only with Docker
+
+```bash
+# build images
+$ docker build -t <image_name> .
+# Ex: docker build -t nuxt_web .
+
+# run container
+docker run --name <container_name> -d -it -v .:<virtual_path> -p <real_port>:<container_expose_port> <image_name>
+# Ex: docker run --name yuu_nuxt -d -it -v .:/app -p 3000:3000 nuxt_web
+```
+
+> Only with Docker Compose (Recommend)
+
+```bash
+$ docker-compose up
+
+# rebuild
+$ docker-compose up --build
+
+# run with current user
+$ CURRENT_UID=$(id -u):$(id -g) docker-compose up --build
+```
+
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

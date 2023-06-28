@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  nuxt_prod:
+    image: nuxt_prod_image
+    container_name: nuxt_prod_container
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    env_file: .env
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+    restart: unless-stopped
+    networks:
+      - nuxt_prod_network
+
+networks:
+  nuxt_prod_network:
